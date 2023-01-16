@@ -1,8 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 
 def home(request):
-    return render(request,'recipes/pages/home.html', context={'name': 'Daiane Correia'})
+    return render(request,'recipes/pages/home.html', context={'name': 'Daiane'})
+
+def receita(request):
+    return render(request,'recipes/portials/receita.html', context={'name': 'Daiane'})
+
+   
+# def receita(request):
+#     return HttpResponseRedirect('recipes/portials/receita.html')
 
 def sobre(request):
     return HttpResponse('SOBRE - hello django')
